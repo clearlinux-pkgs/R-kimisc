@@ -4,18 +4,17 @@
 #
 Name     : R-kimisc
 Version  : 0.4
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/kimisc_0.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/kimisc_0.4.tar.gz
 Summary  : Kirill's Miscellaneous Functions
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-memoise
-Requires: R-plyr
-Requires: R-pryr
+Requires: R-withr
 BuildRequires : R-memoise
 BuildRequires : R-plyr
 BuildRequires : R-pryr
+BuildRequires : R-withr
 BuildRequires : buildreq-R
 
 %description
@@ -29,10 +28,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550857907
+export SOURCE_DATE_EPOCH=1552834337
 
 %install
-export SOURCE_DATE_EPOCH=1550857907
+export SOURCE_DATE_EPOCH=1552834337
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -68,8 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library kimisc|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  kimisc || :
 
 
 %files
@@ -95,3 +93,12 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/kimisc/html/00Index.html
 /usr/lib64/R/library/kimisc/html/R.css
 /usr/lib64/R/library/kimisc/staticdocs/index.R
+/usr/lib64/R/library/kimisc/tests/test-all.R
+/usr/lib64/R/library/kimisc/tests/testthat/scripts/thisfile-cat.R
+/usr/lib64/R/library/kimisc/tests/testthat/scripts/thisfile.R
+/usr/lib64/R/library/kimisc/tests/testthat/test-cut.R
+/usr/lib64/R/library/kimisc/tests/testthat/test-gdiff.R
+/usr/lib64/R/library/kimisc/tests/testthat/test-kimisc.R
+/usr/lib64/R/library/kimisc/tests/testthat/test-list_to_df.R
+/usr/lib64/R/library/kimisc/tests/testthat/test-thisfile.R
+/usr/lib64/R/library/kimisc/tests/testthat/test-vswitch.R
