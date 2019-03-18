@@ -4,13 +4,14 @@
 #
 Name     : R-kimisc
 Version  : 0.4
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/kimisc_0.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/kimisc_0.4.tar.gz
 Summary  : Kirill's Miscellaneous Functions
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-withr
+Requires: R-cli
+BuildRequires : R-cli
 BuildRequires : R-memoise
 BuildRequires : R-plyr
 BuildRequires : R-pryr
@@ -28,10 +29,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552834337
+export SOURCE_DATE_EPOCH=1552890744
 
 %install
-export SOURCE_DATE_EPOCH=1552834337
+export SOURCE_DATE_EPOCH=1552890744
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
