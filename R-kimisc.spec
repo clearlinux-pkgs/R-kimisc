@@ -4,7 +4,7 @@
 #
 Name     : R-kimisc
 Version  : 0.4
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/kimisc_0.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/kimisc_0.4.tar.gz
 Summary  : Kirill's Miscellaneous Functions
